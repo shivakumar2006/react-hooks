@@ -1,12 +1,15 @@
 import React, { useState } from 'react'; 
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { FaCaretLeft } from "react-icons/fa6";
+import { FaCaretRight } from "react-icons/fa6";
 
 const Reference = () => {
 
     const userName = useRef(null);
     const passWord = useRef(null);
-
+    const Navigate = useNavigate();
     const [ username, setUsername ] = useState("");
     const [ password, setPassword ] = useState("");
     const [ showPassword, setShowPassword ] = useState(false);
@@ -19,7 +22,15 @@ const Reference = () => {
 
     const handleClick = (e) => {
         e.preventDefault();
-        console.log(userName.current.value, passWord.current.value);
+        console.log("username : ", userName.current.value, "password : ", passWord.current.value);
+    }
+
+    const handlePrevClick = () => {
+        Navigate("/");
+    }
+
+    const handleNextClick = () => {
+        Navigate("/effect");
     }
 
     return (
@@ -27,6 +38,7 @@ const Reference = () => {
             <form className='flex flex-col items-center'
                 onSubmit={handleSubmit}
             >
+                <h1 className='text-white text-8xl mb-10 mt-[-50px]'>UseRef</h1>
                 <input 
                     type="text"
                     placeholder='Enter username...'
@@ -63,6 +75,28 @@ const Reference = () => {
                     Submit 
                 </button>
             </form>
+            <div className='w-screen flex justify-between items-center px-20 mt-10'>
+                <div className='w-50 h-17 rounded-2xl text-black bg-gray-200'>
+                    <p className='flex justify-center items-center'>useState page</p>
+                    <button 
+                        className='w-40 h-10 mx-5 bg-indigo-500 rounded-2xl text-white flex justify-center items-center hover:bg-indigo-700 space-x-2 cursor-pointer'
+                        onClick={handlePrevClick}
+                    >
+                        <FaCaretLeft/> 
+                        Prev page
+                    </button>
+                </div>
+                <div className='w-50 h-17 rounded-2xl text-black bg-gray-200'>
+                    <p className='flex justify-center items-center'>useEffect page</p>
+                    <button 
+                        className='w-40 h-10 mx-5 bg-indigo-500 rounded-2xl text-white flex justify-center items-center hover:bg-indigo-700 space-x-2 cursor-pointer'
+                        onClick={handleNextClick}
+                    >
+                        Next page
+                        <FaCaretRight/> 
+                    </button>
+                </div>
+            </div>
         </div>
     )
 }
