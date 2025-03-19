@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const Effect = () => {
 
     const [ count, setCount ] = useState(0);
+    
     const Navigate = useNavigate();
 
     useEffect(() => {
@@ -34,6 +35,14 @@ const Effect = () => {
                 {count}
             </div>
             <h1>Automatically change numbers using useEffect hook</h1>
+            <div className='w-42 h-12 my-5 bg-gray-200 rounded-2xl flex justify-center items-center'>
+                <button
+                    className='w-40 h-10 bg-indigo-500 text-white border-indigo-800 border-3 rounded-2xl hover:bg-indigo-700'
+                    onClick={() => setCount(0)}
+                >
+                    ResetCount
+                </button>
+            </div>
 
             <div className='w-screen flex justify-between items-center px-20 mt-10'>
                 <div className='w-50 h-17 rounded-2xl bg-gray-200 text-black flex flex-col justify-center items-center'>
