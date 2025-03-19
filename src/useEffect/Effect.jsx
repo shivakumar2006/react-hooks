@@ -37,7 +37,7 @@ const Effect = () => {
             <h1>Automatically change numbers using useEffect hook</h1>
             <div className='w-42 h-12 my-5 bg-gray-200 rounded-2xl flex justify-center items-center'>
                 <button
-                    className='w-40 h-10 bg-indigo-500 text-white border-indigo-800 border-3 rounded-2xl hover:bg-indigo-700'
+                    className='w-40 h-10 bg-red-500 text-white border-red-800 border-3 rounded-2xl hover:bg-red-700 cursor-pointer'
                     onClick={() => setCount(0)}
                 >
                     ResetCount
