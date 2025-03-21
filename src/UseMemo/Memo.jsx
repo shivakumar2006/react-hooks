@@ -25,10 +25,18 @@ const Memo = () => {
   }
 
   return (
-    <div>
+    <div className='flex flex-col justify-center items-center'>
       <p>Expensive calculation result: {expensiveCalculations}</p>
-      <button onClick={() => setCount(count + 1)}>
+      <button 
+        className='w-40 h-10 mt-5 bg-red-500 border-black rounded-2xl text-white hover:bg-red-700 cursor-pointer'
+        onClick={() => setCount(count + 1)}
+      >
         Increment
+      </button>
+      <button className='w-40 h-10 mt-5 bg-red-500 border-black rounded-2xl text-white hover:bg-red-700 cursor-pointer'
+        onClick={() => setCount(0)}
+      >
+        Reset
       </button>
       <p>Count: {count}</p>
 
