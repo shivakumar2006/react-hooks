@@ -60,7 +60,7 @@ const Reducer = () => {
 
             <div className='w-screen flex justify-between items-center px-20 mt-10'>
                 <div className='w-50 h-17 rounded-2xl bg-gray-200 text-black flex flex-col justify-center items-center'>
-                    <p>useRef page</p>
+                    <p>useEffect page</p>
                     <button 
                         className='w-40 h-10 mx-5 rounded-2xl text-white bg-indigo-500 hover:bg-hover-700 space-x-2 flex justify-center items-center cursor-pointer'
                         onClick={handlePrevClick}
