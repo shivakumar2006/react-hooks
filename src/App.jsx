@@ -7,6 +7,9 @@ import Reducer from "./useReducer/Reducer";
 import Memo from "./useMemo/Memo";
 import ReactMemo from './React.Memo/ReactMemo';
 import Callback from './useCallback/Callback';
+import Content from './ContextAPi/content';
+import { BioProvider } from './ContextAPi/Context';
+
 import "./App.css";
 
 const App = () => {
@@ -19,6 +22,7 @@ const App = () => {
             <Route path="/memo" element={<Memo />} />
             <Route path='/reactmemo' element={<ReactMemo />} />
             <Route path='/callback' element={<Callback />} />
+            <Route path='/context' element={<BioProvider><Content /></BioProvider>} />
         </Routes>
     )
 }
