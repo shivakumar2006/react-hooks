@@ -24,16 +24,6 @@ const Content = () => {
                     Prev page
                 </button>
             </div>
-            <div className='w-50 h-17 rounded-2xl bg-gray-200 text-black flex flex-col justify-center items-center'>
-                <p>ContextAPI page</p>
-                <button 
-                    className='w-40 h-10 mx-5 rounded-2xl text-white bg-indigo-500 hover:bg-indigo-700 flex justify-center items-center space-x-2 cursor-pointer'
-                    onClick={() => alert("No More Page available!!!")}
-                >
-                    Next page
-                    <FaCaretRight />
-                </button>
-            </div>
         </div>
     </div>
   )
