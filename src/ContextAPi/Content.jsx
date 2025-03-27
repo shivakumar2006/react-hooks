@@ -13,7 +13,7 @@ const Content = () => {
     <div className='w-screen h-screen flex flex-col justify-center items-center'>
         <h1 className='text-2xl'>Hello, Context API, my name is {myName} and i am {myAge} years old MAN.</h1>
 
-        <div className='w-screen flex justify-between items-center px-20 mt-10'>
+        <div className='w-screen flex justify-center items-center px-20 mt-10'>
             <div className='w-50 h-17 rounded-2xl bg-gray-200 text-black flex flex-col justify-center items-center'>
                 <p>useCallback page</p>
                 <button 
